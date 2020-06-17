@@ -1,9 +1,11 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
- *
- *
+ *main- check the code for Holberton School students.
+ *Return: exit
  */
+
 int _putchar(char c);
 
 int main(void)
@@ -19,5 +21,4 @@ int main(void)
 	_putchar('n');
 	_putchar('\n');
 	return (0);
-
 }

@@ -1,5 +1,5 @@
 #if Holberton
-#define holberton
+#define Holberton
 int _putchar(char c);
 
 #endif
