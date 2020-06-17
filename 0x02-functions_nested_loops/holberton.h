@@ -1,5 +1,2 @@
-#if Holberton
-#define Holberton
 int _putchar(char c);
-
-#endif
+void print_alphabet(void);
