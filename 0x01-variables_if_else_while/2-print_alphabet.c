@@ -1,21 +1,16 @@
-#include <stdio.h>
+#include<stdio.h>
+
 /**
- * main - print the lowercase alphabet with new line.
- *
- * Return: exit successful.
+ *main- print the lowercase alphabet with new line
+ *Return: exit succesful
  */
 
 int main(void)
 {
-	char AlphabetLowercase, CharacterOfNewLine;
+    int c = 'a';
 
-	AlphabetLowercase = 'a';
-	CharacterOfNewLine = '\n';
-	while (AlphabetLowercase != ('\n' + 1))
-	{
-		if (AlphabetLowercase == ('z' + 1))
-			AlphabetLowercase = CharacterOfNewLine;
-		putchar(AlphabetLowercase++);
-	}
-	return (0);
+    for(; c <= 'z'; c++)
+        putchar(c);
+
+    putchar('\n');
 }
