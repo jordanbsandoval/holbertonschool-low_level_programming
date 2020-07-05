@@ -8,13 +8,12 @@
 
 int main(void)
 {
-	unsigned char LowerCase;
+    char alm = 'z';
 
-	for (LowerCase = 'z'; LowerCase != ('\n' - 1); LowerCase--)
-	{
-		if (LowerCase == ('a' - 1))
-			LowerCase = '\n';
-		putchar(LowerCase);
-	}
+    for(; alm >= 'a'; --alm)
+        putchar(alm);
+
+    putchar('\n');
+
 	return (0);
 }
