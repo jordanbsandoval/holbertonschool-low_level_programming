@@ -9,13 +9,12 @@
 
 int main(void)
 {
-	unsigned char NumberDecimal;
+    int c = '0';
 
-	for (NumberDecimal = '0'; NumberDecimal != ('\n' + 1); NumberDecimal++)
-	{
-		if (NumberDecimal == ('9' + 1))
-			NumberDecimal = '\n';
-		putchar(NumberDecimal);
-	}
+    while (c <= '9')
+    {
+       putchar(c);
+       c++;
+    }
 	return (0);
 }
