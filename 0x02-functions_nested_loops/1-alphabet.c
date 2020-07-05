@@ -1,15 +1,15 @@
 #include "holberton.h"
 /**
- *main- print alphabet lowercase
+ *print_alphabet- print alphabet lowercase
  *Return: exit succesful
  */
 
 void print_alphabet(void)
 {
-    char c = 97;
+char c = 97;
 
-    for (; c <= 122; c++)
-        _putchar(c);
+for (; c <= 122; c++)
+_putchar(c);
 
-    _putchar('\n');
+_putchar('\n');
 }
