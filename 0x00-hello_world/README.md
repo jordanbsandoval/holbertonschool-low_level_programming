@@ -1,5 +1,7 @@
 # 0x00 - C - Hello, World
 
+![Alt text](./img/cfun.png "C-is-fun") 
+
 ## General
 
 <ul>
