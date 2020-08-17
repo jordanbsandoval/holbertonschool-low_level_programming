@@ -1,40 +1,27 @@
 #include <stdio.h>
+
 /**
- * main - program that prints the numbers from 00 to 99.
- * Return: exit successful.
+ *main- program that print the numbers from 00 to 99.
+ *      You can only use putchar five times maximum in your code
+ *Return: exit succesful
  */
+
 int main(void)
 {
-	unsigned int FirstDigit, SecondDigit, StoredCharacter, Accountant;
+int i, p, limit;
 
-	FirstDigit = '0';
-	SecondDigit = '0';
-	Accountant = 0;
-	StoredCharacter = '0';
-
-	while (StoredCharacter != ('\n' + 1))
-	{
-		putchar(StoredCharacter);
-
-		if (SecondDigit > '9')
-			SecondDigit = '0', FirstDigit++;
-
-		if (StoredCharacter >= '0' && StoredCharacter <= '9')
-			Accountant++;
-
-		if (Accountant == 1)
-			StoredCharacter = SecondDigit, SecondDigit++;
-
-		if (Accountant == 2)
-			StoredCharacter = ',', Accountant = 0;
-		else if (StoredCharacter == ',')
-			StoredCharacter = ' ';
-		else if (StoredCharacter == ' ')
-			StoredCharacter = FirstDigit;
-		if (StoredCharacter == '\n')
-			StoredCharacter++;
-		else if (FirstDigit == ('9' + 1))
-			StoredCharacter = '\n';
-	}
-	return (0);
+for (i = 0, limit = 10; i < limit; i++)
+{
+for (p = 0; p < limit; p++)
+{
+putchar(i + '0');
+putchar(p + '0');
+if (!(i == 9 && p == 9))
+{
+putchar(44);
+putchar(32);
+}
+}
+}
+return (0);
 }

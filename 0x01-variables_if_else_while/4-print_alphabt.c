@@ -1,17 +1,20 @@
-#include<stdio.h>
+#include <stdio.h>
 
-/** 
- *main - Print the alphabet less the letter e and q.
- *Return: exit successful.
+/**
+ *main- program that print the alphabet in lowercase
+ *      Print all the letters except q and e
+ *Return: exit succesfule
  */
 
 int main(void)
 {
-    char c = 'a';
+char min = 'a';
 
-    for(; c <= 'z'; ++c)
-    {
-        if(c != 'e' && c != 'q')
-            putchar(c);
-    }
+for (; min <= 'z'; min++)
+{
+if (min != 'q' && min != 'e')
+putchar(min);
+}
+putchar('\n');
+return (0);
 }

@@ -1,20 +1,18 @@
-#include<stdio.h>
+#include <stdio.h>
 
 /**
- *main- prints the alphabet in upper and lower case and
- *        with a line break at the end.
+ *main- Program that write the alphabet in lowercase and then in uppercase
  *Return: exit succesful
  */
 
 int main(void)
 {
-    int a = 'a';
-    int b = 'A';
+char min = 'a', may = 'A';
 
-    for(; a <= 'z'; a++)
-        putchar(a);
-    for(; b <= 'Z'; b++)
-        putchar(b);
-
-    putchar('\n');
+for (; min <= 'z'; min++)
+putchar(min);
+for (; may <= 'Z'; may++)
+putchar(may);
+putchar('\n');
+return (0);
 }

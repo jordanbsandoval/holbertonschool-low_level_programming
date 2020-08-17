@@ -1,46 +1,31 @@
 #include <stdio.h>
+
 /**
- * main - program that prints all possible different
- *        combinations of three digits.
- * Return: exit successfull.
+ *main- Program that print all possble combinations of three digits
+ *      You can only use putchar six times maximum in your code
+ *
  */
+
 int main(void)
 {
-	unsigned int FirstDigit, SecondDigit, ThirdDigit, StoredCharacter;
-	unsigned int Accountant;
+int a, b, c, limit;
 
-	FirstDigit  = '0';
-	SecondDigit = '1';
-	ThirdDigit  = '2';
-	StoredCharacter = FirstDigit;
-	Accountant  = 0;
-
-	while (StoredCharacter != ('\n' + 1))
-	{
-		putchar(StoredCharacter);
-		if (ThirdDigit == ('9' + 1))
-			++SecondDigit, ThirdDigit = SecondDigit + 1;
-		if (StoredCharacter >= '0' && StoredCharacter <= '9')
-			Accountant++;
-		if (Accountant == 1)
-			StoredCharacter = SecondDigit;
-		else if (Accountant == 2)
-			StoredCharacter = ThirdDigit, ThirdDigit++;
-		else if (Accountant == 3)
-			StoredCharacter = ',', Accountant = 0;
-		else if (StoredCharacter == ',')
-			StoredCharacter = ' ';
-		else if (StoredCharacter == ' ')
-			StoredCharacter = FirstDigit;
-		if (SecondDigit == '9' + 1)
-		{
-			FirstDigit++, SecondDigit = FirstDigit + 1;
-			ThirdDigit = SecondDigit + 1;
-		}
-		if (StoredCharacter == '\n')
-			StoredCharacter++;
-		else if ((FirstDigit == '7') && (SecondDigit == '9'))
-			StoredCharacter = '\n';
-	}
-	return (0);
+for (a = 0, limit = 10; a < limit; a++)
+{
+for (b = (a + 1); b < limit; b++)
+{
+for (c = (b + 1); c < limit; c++)
+{
+putchar(a + '0');
+putchar(b + '0');
+putchar(c + '0');
+if (!(a == 7 && b == 8 && c == 9))
+{
+putchar(44);
+putchar(32);
+}
+}
+}
+}
+return (0);
 }

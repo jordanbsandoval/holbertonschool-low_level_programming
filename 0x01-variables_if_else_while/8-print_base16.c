@@ -1,24 +1,22 @@
 #include <stdio.h>
 
 /**
- * main - prints all the numbers of base 16 in lowercase, followed
- *        by a new line
- *
- * Return: exit successful.
+ *main- Program that print all the numbers of base 16 in lowercase
+ *Return: exit succesful
  */
 
 int main(void)
 {
-	unsigned char NumberHexadecimal;
+int hex = 0x30;
+char min;
 
-	NumberHexadecimal = '0';
-	while (NumberHexadecimal != ('\n' + 1))
-	{
-		if (NumberHexadecimal == ('9' + 1))
-			NumberHexadecimal = 'a';
-		else if (NumberHexadecimal == ('f' + 1))
-			NumberHexadecimal = '\n';
-		putchar(NumberHexadecimal++);
-	}
-	return (0);
+for (; hex <= 0x39; hex++)
+putchar(hex);
+if (hex != 0x39)
+{
+for (min = 'a'; min <= 'f'; min++)
+putchar(min);
+}
+putchar('\n');
+return (0);
 }
