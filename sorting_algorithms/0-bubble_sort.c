@@ -6,6 +6,7 @@
  *@yp: Pointer tothe second integer.
  *Return: Nothing.
  */
+
 void swap(int *xp, int *yp)
 {
 	int temp = *xp;
@@ -19,6 +20,7 @@ void swap(int *xp, int *yp)
  *@size: Size of the array.
  *Return: Nothing.
  */
+
 void bubble_sort(int *array, size_t size)
 {
 	size_t i, j;
@@ -38,4 +40,3 @@ void bubble_sort(int *array, size_t size)
 		}
 	}
 }
-
