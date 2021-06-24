@@ -1,16 +1,17 @@
 #include <stdio.h>
 
 /**
- *main- Program that print the numbers of base 10
- *Return: exit succesful
+ *main- print the numbers of base 10
+ *Return: exit succesfull
  */
 
 int main(void)
 {
-int i = 0;
-for (; i < 10; i++)
-putchar(i + '0');
-putchar('\n');
+	int i;
 
-return (0);
+	for (i = 0; i < 10; i++)
+		putchar(i + '0');
+
+	putchar('\n');
+	return (0);
 }

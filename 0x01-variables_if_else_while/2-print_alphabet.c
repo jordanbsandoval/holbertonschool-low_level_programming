@@ -1,15 +1,17 @@
 #include <stdio.h>
 
 /**
- *main- Program that print to alphabet in lowercase
- *Return: exit succesful
+ *main- Print to alphabet in lowercase
+ *Return: exit succesfull
  */
 
 int main(void)
 {
-char i = 'a' - 1;
-while (i++ < 'z')
-putchar(i);
-putchar('\n');
-return (0);
+	int i;
+
+	for (i = 97 ; i <= 122; i++)
+		putchar(i);
+	putchar('\n');
+
+	return (0);
 }
