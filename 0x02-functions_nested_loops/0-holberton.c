@@ -1,16 +1,8 @@
 #include "holberton.h"
 
 /**
- *_putchar- function print characteraslñkdfjasdlñkfajs
- *@c: charcarter
- *Return: an character
- */
-
-int _putchar(char c);
-
-/**
- *main- check the code for Holberton School students.
- *Return: exit
+ *main- print Holberton
+ *Return: exit succesfull
  */
 
 int main(void)
@@ -25,6 +17,5 @@ int main(void)
 	_putchar('o');
 	_putchar('n');
 	_putchar('\n');
-
 	return (0);
 }
