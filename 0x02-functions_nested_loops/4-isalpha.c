@@ -2,6 +2,7 @@
 
 /**
  *_isalpha- function that checks for alphabetic character.
+ *@c: parameter to value
  *Return: if alphabet 1 o 0 otherwise
  */
 
