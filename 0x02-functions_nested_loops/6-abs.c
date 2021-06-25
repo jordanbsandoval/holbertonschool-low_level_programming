@@ -3,6 +3,7 @@
 
 /**
  *_abs- function that computes the absolute value of an integer.
+ *@n: Parameter to calculate
  *Return: 0 to succesfull
  */
 
