@@ -1,12 +1,12 @@
-#include "holberton.h"
+#include <stdio.h>
 
 /**
- *fizz_buzz- Print number of 1 to 100
+ *main- test the function fizz_buzz
  *
  *Return: exit succesfull
  */
 
-void fizz_buzz(void)
+int main(void)
 {
 	int i;
 
@@ -22,16 +22,5 @@ void fizz_buzz(void)
 			printf(" %d", i);
 	}
 	printf("\n");
-}
-
-/**
- *main- test the function fizz_buzz
- *
- *Return: exit succesfull
- */
-
-int main(void)
-{
-	fizz_buzz();
 	return (0);
 }
