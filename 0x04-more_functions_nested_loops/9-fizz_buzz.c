@@ -24,6 +24,12 @@ void fizz_buzz(void)
 	printf("\n");
 }
 
+/**
+ *main- test the function fizz_buzz
+ *
+ *Return: exit succesfull
+ */
+
 int main(void)
 {
 	fizz_buzz();
