@@ -1,9 +1,17 @@
-## 0x05. C - Pointers, arrays and strings
+# 0x05. C - Pointers, arrays and strings
 
-<ul>
-<li>What are pointers and how to use them</li>
-<li>What are arrays and how to use them</li>
-<li>What are the differences between pointers and arrays</li>
-<li>How to use strings and how to manipulate them</li>
-<li>Scope of variables</li>
-</ul>
+## Resources
+Read or watch:
+
+* [C - Arrays](https://www.tutorialspoint.com/cprogramming/c_arrays.htm)
+* [C - Pointers](https://www.tutorialspoint.com/cprogramming/c_pointers.htm)
+* [C - Strings](https://www.tutorialspoint.com/cprogramming/c_strings.htm)
+
+## General
+
+- What are pointers and how to use them
+- What are arrays and how to use them
+- What are the differences between pointers and arrays
+- How to use strings and how to manipulate them
+- Scope of variables
+

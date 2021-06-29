@@ -1,17 +1,16 @@
 #include "holberton.h"
 
 /**
- *swap_int - updates a integer value to 98
- *@a: Variable a
- *@b: Variable b
+ *swap_int- changue the value the two variables with pointer's 
+ *@a: first parameter
+ *@b: second parameter
  *
- *Return: void
+ *Return: changue value
  */
 
 void swap_int(int *a, int *b)
 {
-int c;
-c = *a;
-*a = *b;
-*b = c;
+	int p = *a;
+	*a = *b;
+	*b = p;
 }
