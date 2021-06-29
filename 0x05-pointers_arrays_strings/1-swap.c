@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- *swap_int- changue the value the two variables with pointer's 
+ *swap_int- changue the value the two variables with pointer's
  *@a: first parameter
  *@b: second parameter
  *
