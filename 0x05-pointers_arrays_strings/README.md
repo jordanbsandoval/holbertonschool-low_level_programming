@@ -1,5 +1,10 @@
 # 0x05. C - Pointers, arrays and strings
 
+## Concepts
+For this project, students are expected to look at these concepts:
+* [Pointers and arrays](https://intranet.hbtn.io/concepts/60)
+* [Data Structures](https://intranet.hbtn.io/concepts/120)
+
 ## Resources
 Read or watch:
 

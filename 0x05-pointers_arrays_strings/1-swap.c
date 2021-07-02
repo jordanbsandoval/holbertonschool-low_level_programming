@@ -1,16 +1,19 @@
 #include "holberton.h"
 
 /**
- *swap_int- changue the value the two variables with pointer's
- *@a: first parameter
- *@b: second parameter
+ *swap_int- changue the value between two values
+ *@a: first parameter pointer
+ *@b: second parameter pointer
  *
- *Return: changue value
+ *Return: exit succesfull
  */
 
 void swap_int(int *a, int *b)
 {
-	int p = *a;
-	*a = *b;
-	*b = p;
+	int n;
+
+	n = *b;
+
+	*b = *a;
+	*a = n;
 }
