@@ -1,10 +1,9 @@
-## 0x06. C - More pointers, arrays and strings 
+# 0x06. C - More pointers, arrays and strings 
 
-###General
-<ul>
-<li>What are pointers and how to use them</li>
-<li>What are arrays and how to use them</li>
-<li>What are the differences between pointers and arrays</li>
-<li>How to use strings and how to manipulate them</li>
-<li>Scope of variables</li>
-</ul>
+##General
+
+- What are pointers and how to use them
+- What are arrays and how to use them
+- What are the differences between pointers and arrays
+- How to use strings and how to manipulate them
+- Scope of variables
