@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 int strlenj(char s[]);
 
@@ -31,13 +31,14 @@ int strlenj(char s[])
 
 char *_strncat(char *dest, char *src, int n)
 {
-	dest += strlenj(dest);
+	char *tmp = dest;
 
+	dest += strlenj(dest);
 	while (*src != '\0' && n > 0)
 	{
 		*dest++ = *src++;
 		n--;
 	}
-
+	dest = tmp;
 	return (dest);
 }
