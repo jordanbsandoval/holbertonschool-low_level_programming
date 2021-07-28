@@ -18,8 +18,8 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		*tmp++ = *src++;
 		n--;
+		if (*src == '\0')
+			*tmp = '\0';
 	}
-	if (*src == '\0')
-		*tmp = '\0';
 	return (dest);
 }
