@@ -35,7 +35,7 @@ int _strcmp(char *s1, char *s2)
 
 	if (datoUno < datoDos)
 		return (-15);
-	else if(datoUno > datoDos)
+	else if (datoUno > datoDos)
 		return (15);
 	else
 		return (0);
