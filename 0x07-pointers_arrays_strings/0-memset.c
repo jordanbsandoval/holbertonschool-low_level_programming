@@ -1,16 +1,19 @@
 #include "holberton.h"
 
 /**
- * _memset - Function that fills memory with a constant byte.
- * @Array: Pointer to the array to be changed, by the Pattern variable.
- * @Size: How many times is the array pointed to by the Array variable entered.
- * @Pattern: Pattern that is inserted into what the Array points to.
- * Return: Returns the start of the pointer.
+ *_memset- function that fills memory with a constant byte.
+ *
+ *@s: string to modificate
+ *@b: byte constant to store
+ *@n: number bytes to used
+ *
+ *Return: string modificated
  */
 
-char *_memset(char *Array, char Pattern, unsigned int Size)
+char *_memset(char *s, char b, unsigned int n)
 {
-	while (Size--)
-		Array[Size] = Pattern;
-	return (Array);
+	while (n--)
+		*s++ = b;
+
+	return (s);
 }
