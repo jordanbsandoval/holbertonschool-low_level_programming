@@ -5,7 +5,7 @@
  *
  *@dest: position of the array to changue of value
  *@src: value to input in the array
- *n: number of bytes to copy
+ *@n: number of bytes to copy
  *
  *Return: pointer to init of array
  */
