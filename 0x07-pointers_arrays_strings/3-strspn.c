@@ -1,34 +1,30 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
- * _strspn - gets the length of a prefix substring
- * @s: pointer to char array
- * @accept: pointer to char array
- * Return: none
+ *_strspn-
+ *
+ *@s: string to evaluate
+ *@accept: string from evaluate for coincide
+ *
+ *Return: number of coincidence
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, j, k, f;
+	int i;
+	unsigned int count, noCount;
+	count = 0;
 
-	i = 0;
-	k = 0;
-	while (s[i] != '\0')
+	while (*s)
 	{
-		f = 0;
-		j = 0;
-		while (accept[j] != '\0')
-		{
-			if (s[i] == accept[j])
-			{
-				k++;
-				f = 1;
-				break;
-			}
-			j++;
-		}
-		if (f == 0)
+		noCount = count;
+
+		for (i = 0; accept[i] != '\0'; i++)
+			if (*s == accept[i])
+				count++;
+
+		if (count != 0 && count == noCount)
 			break;
-		i++;
+		s++;
 	}
-	return (k);
+	return (count);
 }
