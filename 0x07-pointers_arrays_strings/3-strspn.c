@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- *_strspn-
+ *_strspn- function that gets the length of a prefix substring.
  *
  *@s: string to evaluate
  *@accept: string from evaluate for coincide
@@ -12,8 +12,8 @@ unsigned int _strspn(char *s, char *accept)
 {
 	int i;
 	unsigned int count, noCount;
-	count = 0;
 
+	count = 0;
 	while (*s)
 	{
 		noCount = count;
