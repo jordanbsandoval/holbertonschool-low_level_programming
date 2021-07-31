@@ -1,18 +1,21 @@
 #include <stdio.h>
-/**
- * main - program to print arguments on a new line
- * @argc: size of argv array and number of command line arguments
- * @argv: An array of size argc
- * Return: always successful
- */
 
+/**
+ *main- prints all arguments it receives.
+ *
+ *@argc: number of elements in the array
+ *@argv: array of strings that apunta to an char
+ *
+ *Return: exit succes
+ */
 int main(int argc, char *argv[])
 {
-	int c;
+	int i = 0;
 
-	for (c = 0; c < argc; c++)
+	while (argc--)
 	{
-		printf("%s\n", argv[c]);
+		printf("%s\n", argv[i]);
+		i++;
 	}
 	return (0);
 }
