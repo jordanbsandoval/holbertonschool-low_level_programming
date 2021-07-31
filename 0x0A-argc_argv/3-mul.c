@@ -1,12 +1,14 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
+#include <stdlib.h>
 
 /**
- * main - print to multiply two numbers
- * @argc: size of argv array and num
- * @argv: An array of size argc
- * Return: always successful
+ *main- program that multiplies two numbers
+ *
+ *@argc: number of elements in the array
+ *@argv: array of strings that apunta to an char
+ *
+ *Return: exit succesfull
  */
 
 int main(int argc, char *argv[])
@@ -16,9 +18,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	else
-	{
-		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
-		return (0);
-	}
+	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+	return (0);
 }
