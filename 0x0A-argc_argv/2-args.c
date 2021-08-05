@@ -1,21 +1,16 @@
 #include <stdio.h>
 
 /**
- *main- prints all arguments it receives.
+ *main- print the arguments passed into it.
  *
- *@argc: number of elements in the array
- *@argv: array of strings that apunta to an char
+ *@argc: number of elements passed into program
+ *@argv: array of elements passed into it.
  *
- *Return: exit succes
+ *Return: always 0.
  */
 int main(int argc, char *argv[])
 {
-	int i = 0;
-
-	while (argc--)
-	{
-		printf("%s\n", argv[i]);
-		i++;
-	}
+	while (argc-- >= 1)
+		printf("%s\n", *argv++);
 	return (0);
 }
