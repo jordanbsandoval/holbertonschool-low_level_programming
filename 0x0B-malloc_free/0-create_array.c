@@ -1,6 +1,4 @@
-#include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "holberton.h"
 
 /**
  *create_array- creates array of char and initializes it with a specific char.
