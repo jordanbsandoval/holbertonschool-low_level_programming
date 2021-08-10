@@ -42,6 +42,14 @@ char *str_concat(char *s1, char *s2)
 	return (tmp);
 }
 
+/**
+ *_strlen- function that count the indices of array
+ *
+ *@s: string to evaluate
+ *
+ *Return: number of elements of an array
+ */
+
 int _strlen(char s[])
 {
 	int i = 0;
