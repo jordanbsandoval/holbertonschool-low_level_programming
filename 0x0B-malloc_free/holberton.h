@@ -1,9 +1,10 @@
 #ifndef HOLBERTON
 #define HOLBERTON
 
-int _putchar(char c);
-char *create_array(unsigned int size, char c);
-char *_strdup(char *str);
-char *str_concat (char *s1, char *s2);
+#include <stdio.h>
+#include <stdlib.h>
 
-#endif /* HOLBERTON */
+char *create_array(unsigned int size, char c);
+void simple_print_buffer(char *buffer, unsigned int size);
+
+#endif
