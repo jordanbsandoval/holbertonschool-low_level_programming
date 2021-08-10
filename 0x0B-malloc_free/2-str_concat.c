@@ -1,6 +1,24 @@
 #include "holberton.h"
 
 /**
+ *_strlen- function that count the indices of array
+ *
+ *@s: string to evaluate
+ *
+ *Return: number of elements of an array
+ */
+
+int _strlen(char s[])
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+		i++;
+
+	return (i);
+}
+
+/**
  *str_concat- function that concatenates two strings
  *
  *@s1: parameter string
@@ -40,22 +58,4 @@ char *str_concat(char *s1, char *s2)
 	tmp[i + p] = '\0';
 
 	return (tmp);
-}
-
-/**
- *_strlen- function that count the indices of array
- *
- *@s: string to evaluate
- *
- *Return: number of elements of an array
- */
-
-int _strlen(char s[])
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-		i++;
-
-	return (i);
 }
