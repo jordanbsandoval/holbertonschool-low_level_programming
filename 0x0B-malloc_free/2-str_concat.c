@@ -46,12 +46,15 @@ char *str_concat(char *s1, char *s2)
 	rst = rs1 + rs2 + 1;
 	tmp = malloc(sizeof(char) * rst);
 
+	/*varificando si creo el espacio en memoria*/
 	if (tmp == NULL)
 		return (NULL);
 
+	/*copiando el primer string*/
 	for (i = 0; i < rs1; i++)
 		tmp[i] = s1[i];
 
+	/*concatenando el segundo string*/
 	for (p = 0; p < rs2; p++)
 		tmp[i + p] = s2[p];
 
