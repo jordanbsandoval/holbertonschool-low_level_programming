@@ -14,7 +14,7 @@ Read or watch:
 - [While loop](https://intranet.hbtn.io/rltoken/RY9a1EDxRKNNHhxbJ6Pn_g)
 
 ## Learning Objectives
-###General
+### General
 
 - What are the arithmetic operators and how to use them
 - What are the logical operators (sometimes called boolean operators) and how to use them
