@@ -10,22 +10,24 @@ void jack_bauer(void)
 {
 	int i, j, k, l;
 
-	for (i = 0; i < 3; i++)
+	for (i = 48; i < 51; i++)
 	{
-		for (j = 0; j < 4; j++)
+		for (j = 48; j < 58; j++)
 		{
-			for (k = 0; k < 6; k++)
+			for (k = 48; k < 54; k++)
 			{
-				for (l = 0; l < 10; l++)
+				for (l = 48; l < 58; l++)
 				{
-					_putchar(i + '0');
-					_putchar(j + '0');
-					_putchar(':');
-					_putchar(k + '0');
-					_putchar(l + '0');
+					_putchar(i);
+					_putchar(j);
+					_putchar(58);
+					_putchar(k);
+					_putchar(l);
 					_putchar('\n');
 				}
 			}
+			if (i == 50 && j == 51)
+				break;
 		}
 	}
 }
