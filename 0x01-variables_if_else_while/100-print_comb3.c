@@ -1,16 +1,16 @@
 #include <stdio.h>
 
 /**
+ *main- program that prints all possible different combinations of two digits.
  *
- *
- *
+ *Return: always 0.
  */
 
 int main(void)
 {
 	int i, p;
-	i = 0;
 
+	i = 0;
 	while (i < 9)
 	{
 		p = i + 1;
