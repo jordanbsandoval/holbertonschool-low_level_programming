@@ -1,10 +1,9 @@
 #include <stdio.h>
 
 /**
+ *main- print hexa base16
  *
- *
- *
- *
+ *Return: always 0.
  */
 int main(void)
 {
@@ -16,7 +15,6 @@ int main(void)
 		putchar(i + '0');
 		i++;
 	}
-
 	while (a <= 'f')
 	{
 		putchar(a);
