@@ -1,7 +1,7 @@
 # 0x04. C - More functions, more nested loops
 
 ## Resources
-Read or Watch:
+### Read or Watch:
 
 * [Nested while loops](https://www.youtube.com/watch?v=Z3iGeQ1gIss)
 * [C - Functions](https://www.tutorialspoint.com/cprogramming/c_functions.htm)
@@ -9,7 +9,8 @@ Read or Watch:
 * [What is the purpose of a function prototype?](https://www.geeksforgeeks.org/what-is-the-purpose-of-a-function-prototype/)
 * [C - Header Files](https://www.tutorialspoint.com/cprogramming/c_header_files.htm)
 
-## General
+## Learning Objectives
+### General
 
 - What are nested loops and how to use them
 - What is a function and how do you use functions
@@ -20,6 +21,7 @@ Read or Watch:
 - What are header files and how to to use them with #include
 
 ## Requerements
+### General
 
 - Allowed editors: vi, vim, emacs
 - All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
@@ -32,6 +34,6 @@ Read or Watch:
 - You are allowed to use _putchar
 - You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
 - In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-- The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called holberton.h
+- The prototypes of all your functions and the prototype of the function myPutchar should be included in your header file called holberton.h
 - Don’t forget to push your header file
 
