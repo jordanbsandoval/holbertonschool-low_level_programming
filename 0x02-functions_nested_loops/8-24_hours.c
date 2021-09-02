@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *jack_bauer:
+ *jack_bauer- imprimiendo las horas del dia
  *
  *Return: void
  */
@@ -14,9 +14,9 @@ void jack_bauer(void)
 	{
 		for (j = 0; j < 4; j++)
 		{
-			for(k = 0; k < 6; k++)
+			for (k = 0; k < 6; k++)
 			{
-				for(l = 0; l < 10; l++)
+				for (l = 0; l < 10; l++)
 				{
 					_putchar(i + '0');
 					_putchar(j + '0');
