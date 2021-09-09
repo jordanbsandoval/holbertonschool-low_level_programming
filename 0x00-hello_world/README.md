@@ -5,7 +5,7 @@
 ## Resources
 ### Read or watch:
 
-- [Everything you need to know to start with C.pdf](https://holbertonintranet.s3.amazonaws.com/uploads/misc/2021/1/d801279f75de6a982a55d752dfd3632909f720f0.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210909%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210909T062110Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=e78feb0cba9bd26b971c60765afdbc3a0a128ec9beb21106d56af38980b4cbbd)You do not have to learn everything in there yet, but make sure you read it entirely first
+- [Everything you need to know to start with C.pdf](https://holbertonintranet.s3.amazonaws.com/uploads/misc/2021/1/d801279f75de6a982a55d752dfd3632909f720f0.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210909%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210909T062110Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=e78feb0cba9bd26b971c60765afdbc3a0a128ec9beb21106d56af38980b4cbbd) (You do not have to learn everything in there yet, but make sure you read it entirely first)
 
 
 ## General
