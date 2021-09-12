@@ -28,7 +28,7 @@ void times_table(void)
                         else
                                 break;
 
-                        if (tmp < 9 && tmp2 > 9 || tmp > 9)
+                        if ((tmp <= 9 && tmp2 > 9) || tmp > 9)
                                 putchar(' ');
                         else
                         {
