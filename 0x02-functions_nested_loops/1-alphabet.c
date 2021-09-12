@@ -1,17 +1,15 @@
 #include "main.h"
 
 /**
- *print_alphabet- programa que imprime el abecedario con la funcion propia _put
+ *print_alphabet- print alphabet in lowercase
  *
- *Return: always 0.
+ *Return: print alphabet in lowercase
  */
-
 void print_alphabet(void)
 {
-	int i = 0;
-	char alp[] = "abcdefghijklmnopqrstuvwxyz";
+	char a = 'a';
 
-	for (; alp[i] != '\0'; i++)
-		_putchar(alp[i]);
+	for (; a <= 'z'; a++)
+		_putchar(a);
 	_putchar('\n');
 }
