@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *_islower- function that checks for lowercase character.
+ *_isupper- funcion que checkea si el parametro es una letra mayuscula.
  *
  *@c: parameter to evaluate
  *
