@@ -13,8 +13,8 @@ void print_rev(char *s)
 	int ancho = _strlen(s);
 
 	for (; ancho >= 0; ancho--)
-		printf("%c", s[ancho]);
-	printf("\n");
+		_putchar(s[ancho]);
+	_putchar('\n');
 }
 
 /**

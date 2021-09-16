@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
+ *puts_half- imprime la segunda mitad de un array
  *
+ *@str: puntero a un array
  *
- *
- *
- *
+ *Return: imprime la segunda mitad
  */
 
 void puts_half(char *str)
@@ -15,10 +15,10 @@ void puts_half(char *str)
 
 	while (half < maximo)
 	{
-		printf("%c", str[half]);
+		_putchar(str[half]);
 		half++;
 	}
-	printf("\n");
+	_putchar('\n');
 }
 
 /**
