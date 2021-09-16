@@ -1,39 +1,39 @@
 #include "main.h"
 
 /**
- *strlenj- calculate the number of elements of an array
+ *_strcat- concatena dos strings
  *
- *@s: string
+ *@dest: puntero a un array de caracteres donde se concatenara el string pasado
+ *@src: puntero a un array de caracteres que se concatenara al string deseado
  *
- *Return: number of elements of an array
- */
-
-int strlenj(char s[])
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-
-/**
- *_strcat- concatenate two strings
- *
- *@dest: string to concatenate
- *@src: string from concatenate
- *
- *Return: pointer the end of string
+ *Return: puntero al string concatenado
  */
 
 char *_strcat(char *dest, char *src)
 {
 	char *tmp = dest;
 
-	dest += strlenj(dest);
-
+	dest += _strlen(dest);
 	while (*src != '\0')
 		*dest++ = *src++;
-
 	return (tmp);
 }
+
+/**
+ *_strlen- determina el ancho de un string
+ *
+ *@s: puntero a un string
+ *
+ *Return: numer de caracteres del string
+ */
+
+int _strlen(char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+		;
+
+	return (i);
+}
+
