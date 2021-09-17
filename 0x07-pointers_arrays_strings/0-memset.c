@@ -1,24 +1,20 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- *_memset- function that fills memory with a constant byte.
+ *_memset- cambia el valor del parametro apuntado por otro caracter
  *
- *@s: string to modificate
- *@b: byte constant to store
- *@n: number bytes to used
+ *@s: puntero al array de caracteres
+ *@b: caracter deseado para cambiar
+ *@n: numero de bytes a sobreescribir
  *
- *Return: string modificated
+ *Return: puntero a la cadena sobreescrita
  */
-
 char *_memset(char *s, char b, unsigned int n)
 {
+	unsigned int i = 0;
 	char *tmp = s;
 
-	while (n > 0)
-	{
+	for (i = 0; i < n; i++)
 		*s++ = b;
-		n--;
-	}
-
 	return (tmp);
 }
