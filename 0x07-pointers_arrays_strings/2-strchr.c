@@ -1,17 +1,22 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- *_strchr- function that locates a character in a string.
+ *_strchr- encuentra la primer ocurrencia e imprime despues de ello
  *
- *@s: string to evaluate
- *@c: character to search
+ *@s: puntero a cadena
+ *@c: caracter a encontrar en la cadena
  *
- *Return: position of the first ocurrenc
+ *Return: puntero a subcadena resultante o valor nullo si c no contiene un valo
  */
+
 char *_strchr(char *s, char c)
 {
-	while (*s++)
+	if (c == '\0')
+		return ('\0');
+	while (*s)
+	{
 		if (*s == c)
-			break;
-	return (s);
+			return (s);
+		s++;
+	}
 }
