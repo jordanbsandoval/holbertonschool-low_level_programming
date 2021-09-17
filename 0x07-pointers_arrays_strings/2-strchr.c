@@ -1,24 +1,25 @@
 #include "main.h"
 
 /**
- *_strchr- encuentra la primer ocurrencia e imprime despues de ello
+ * _strchr - locates a character in a string
+ * @s: string to evaluate
+ * @c: character to be found
  *
- *@s: puntero a cadena
- *@c: caracter a encontrar en la cadena
- *
- *Return: puntero a subcadena resultante o valor nullo si c no contiene un valo
+ * Return: pointer to first occurrence of the character
+ * - return null if nothing is found
  */
-
 char *_strchr(char *s, char c)
 {
-	if (c == '\0')
-		return ('\0');
+
 	while (*s)
 	{
 		if (*s == c)
 			return (s);
 		s++;
 	}
+	/*check null character*/
+	if (*s == c)
+		return (s);
 
-	return (s);
+	return (NULL);
 }
