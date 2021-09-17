@@ -7,19 +7,18 @@
  *
  *Return: puntero al inicio del string recientemente cambiado
  */
-
 char *leet(char *s)
 {
 	char *tmp = s;
-	char lowerc[] = {'a', 'e', 'o', 't', 'l'};
-	char upperc[] = {'A', 'E', 'O', 'T', 'L'};
-	char entero[] = {'4', '3', '0', '7', '1'};
-	int i;
-	int stop = sizeof(entero);
+	int p;
+	char letter[5][2] = {
+		{'a', 'A'}, {'e', 'E'}, {'o', 'O'}, {'t', 'T'}, {'l', 'L'}
+	};
+	char replace[5] = {'4', '3', '0', '7', '1'};
 
 	for (; *s != '\0'; s++)
-		for (i = 0; i < stop; i++)
-			if (*s == lowerc[i] || *s == upperc[i])
-				*s = entero[i];
+		for (p = 0; p < 5; p++)
+			if (*s == letter[p][0] || *s == letter[p][1])
+				*s = replace[p];
 	return (tmp);
 }
