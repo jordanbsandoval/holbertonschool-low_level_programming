@@ -9,13 +9,12 @@
  *
  *Return: puntero al string cambiado
  */
-
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
 
-	for (i = 0; i < n && *src != '\0'; i++)
-		dest[i] = *src++;
-
+	for (i = 0; i < n && (*dest++ = *src++) != '\0'; i++)
+		;
 	return (dest);
 }
+
