@@ -19,12 +19,10 @@ char *_strpbrk(char *s, char *accept)
 		while (accept[conteo])
 		{
 			if (*s == accept[conteo])
-				break;
+                return (s);
 			conteo++;
 		}
-		if (*s == accept[conteo])
-			break;
 		s++;
 	}
-	return (s);
+	return (NULL);
 }
