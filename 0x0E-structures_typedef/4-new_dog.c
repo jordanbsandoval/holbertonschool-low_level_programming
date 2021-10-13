@@ -58,7 +58,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 
 	/* Asignando memoria para copiar los parametros */
-	tmp_name = malloc(sizeof(char) * _strlen(name));
+	tmp_name = malloc(sizeof(char) * _strlen(name) + 1);
 	if (tmp_name == NULL)
 	{
 		free(tmp);
@@ -67,7 +67,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	copy(tmp_name, name);
 
 	/* Asignando memoria para copiar los parametros */
-	tmp_owner = malloc(sizeof(char) * _strlen(owner));
+	tmp_owner = malloc(sizeof(char) * _strlen(owner) + 1);
 
 	if (tmp_owner ==NULL)
 	{
