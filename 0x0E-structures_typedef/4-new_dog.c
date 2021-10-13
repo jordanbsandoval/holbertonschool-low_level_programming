@@ -1,76 +1,88 @@
-#include <stdlib.h>
 #include "dog.h"
 
 /**
- * _strlen - show the lenght of a string
- * @s: pointe to  pass the array
+ * _strlen- cuenta los elementos de un array
  *
- * Return: none
+ * @s: string apuntado
+ *
+ * Return: numero de elementos
  */
 
 int _strlen(char *s)
 {
-	int a = 0;
+	int i;
 
-	while (s[a])
-		++a;
-	return (a);
+	for (i = 0; s[i]; i++)
+		;
+	return (i);
 }
 
 /**
- * *_strcpy - copy a string from another pointer
- * @dest: pointer to a string
- * @src: pointer to the strign to concatenate
+ * copy- Copia un string a otro segmento de memoria apuntada a char
  *
- * Return: dest
+ * @to: almacena el string
+ * @from: string a copiar
+ *
+ * Return: void
  */
-char *_strcpy(char *dest, char *src)
+void copy(char *to, char *from)
 {
-	int count = 0, length;
+	int i;
 
-	length = _strlen(src);
-	while (count <= length)
-	{
-		dest[count] = src[count], count++;
-	}
-	return (dest);
+	i = 0;
+	while ((to[i] = from[i]) != '\0')
+		i++;
 }
-
 /**
- * *new_dog - new dog
- * @name: string
- * @age: value
- * @owner: string
- * Return: new  struct
+ * struct dog_t- 
+ *
+ *
+ *
+ *
+ *
+ *
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *p;
-	int a, b;
+	dog_t *tmp = NULL;
+	char *tmp_name = NULL, *tmp_owner = NULL;
 
-	a = _strlen(name), b = _strlen(owner);
-
-	p = malloc(sizeof(dog_t));
-	if (p == NULL)
+	/* Validando los argumentos*/
+	if (name == NULL || age < 0 || owner == NULL)
 		return (NULL);
 
-	p->name = malloc(a + 1);
-	if (p->name == NULL)
+	/* asignando memoria para la nueva estructura*/
+	tmp = malloc(sizeof(dog_t));
+	if (tmp == NULL)
+		return (NULL);
+
+	/* Asignando memoria para copiar los parametros */
+	tmp_name = malloc(sizeof(char) * _strlen(name));
+	if (tmp_name == NULL)
 	{
-		free(p);
+		free(tmp);
 		return (NULL);
 	}
-	p->name = _strcpy(p->name, name);
+	copy(tmp_name, name);
 
-	p->owner = malloc(b + 1);
-	if (p->owner == NULL)
+	/* Asignando memoria para copiar los parametros */
+	tmp_owner = malloc(sizeof(char) * _strlen(owner));
+
+	if (tmp_owner ==NULL)
 	{
-		free(p->name);
-		free(p);
+		free(tmp_name);
+		free(tmp);
 		return (NULL);
 	}
-	p->owner = _strcpy(p->owner, owner);
+	/* copy argumentos a memoria asignada */
+	copy(tmp_owner, owner);
 
-	p->age = age;
-	return (p);
+
+	tmp->name = tmp_name;
+	tmp->age = age;
+	tmp->owner = tmp_owner;
+
+	return(tmp);
 }
+
