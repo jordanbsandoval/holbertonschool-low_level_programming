@@ -4,6 +4,11 @@
 For this project, students are expected to look at these concepts:
 * [Pointers and arrays](https://intranet.hbtn.io/concepts/60)
 * [Data Structures](https://intranet.hbtn.io/concepts/120)
+### References:
+* [Tutorials Point](https://www.tutorialspoint.com/data_structures_algorithms/data_structures_basics.htm)
+* [Geeks for Geeks](https://www.geeksforgeeks.org/data-structures/)
+How to select the appropiate Data Structure:
+* [Career Drill](https://www.careerdrill.com/blog/coding-interview/choosing-the-right-data-structure-to-solve-problems/)
 
 ## Resources
 Read or watch:
