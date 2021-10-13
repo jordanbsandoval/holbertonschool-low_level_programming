@@ -34,13 +34,13 @@ void copy(char *to, char *from)
 		i++;
 }
 /**
- * struct dog_t- 
+ * new_dog- funcion que devuelve un puntero ha una estructura
  *
+ * @name: puntero a char que contiene un string
+ * @age: parametro para dar valor a la estructura
+ * @owner: puntero a char que contiene un string
  *
- *
- *
- *
- *
+ * Return: devulve un puntero a una estructura
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
@@ -69,7 +69,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	/* Asignando memoria para copiar los parametros */
 	tmp_owner = malloc(sizeof(char) * _strlen(owner) + 1);
 
-	if (tmp_owner ==NULL)
+	if (tmp_owner == NULL)
 	{
 		free(tmp_name);
 		free(tmp);
@@ -83,6 +83,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	tmp->age = age;
 	tmp->owner = tmp_owner;
 
-	return(tmp);
+	return (tmp);
 }
 
