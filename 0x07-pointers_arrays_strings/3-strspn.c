@@ -11,22 +11,17 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int conteo = 0;
+	unsigned int conteo = 0, i;
 
-	while (*s)
+	for (; *s != '\0'; s++)
 	{
-		int i = 0;
 		unsigned int tmp = conteo;
 
-		while (accept[i])
-		{
+		for (i = 0; *(accept + i) != '\0'; i++)
 			if (*s == accept[i])
 				conteo++;
-			i++;
-		}
 		if (conteo != 0 && conteo == tmp)
 			break;
-		s++;
 	}
 	return (conteo);
 }
