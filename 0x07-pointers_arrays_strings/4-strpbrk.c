@@ -1,28 +1,24 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- *_strpbrk- funcion que busca en una cadena x un conjunto de bytes
+ * _strpbrk- busca en una cadena cualquiera de un conjunto de bytes
  *
- **@s: puntero a un array de caracteres. 1er parametro
- *@accept: puntero a un array de caracteres. 2do parametro
+ * @s: pointer a char to evaluate
+ * @accept: pointer a char from string
+ * Description:	La función strspn() calcula la longitud (en bytes) del segment
+ *		o inicial de s, que está formado en su totalidad por bytes en accept.
  *
- *Return: Deuelve el string resultante al encontrar la primer coincidencia bits
+ * Return: NULL if no search character
+ *	   puntero a la cadena que contiene el conjunto de bytes
  */
 
 char *_strpbrk(char *s, char *accept)
 {
-	while (*s)
-	{
-		int conteo = 0;
+	int i;
 
-		while (accept[conteo])
-		{
-			if (*s == accept[conteo])
-                return (s);
-			conteo++;
-		}
-		s++;
-	}
+	for (; *(s) != '\0'; s++)
+		for (i = 0; *(accept + i) != '\0'; i++)
+			if (*(s) == *(accept + i))
+				return (s);
 	return (NULL);
 }
