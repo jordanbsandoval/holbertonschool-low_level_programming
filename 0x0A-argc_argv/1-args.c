@@ -1,14 +1,13 @@
 #include <stdio.h>
 
 /**
- *main- imprimiendo el numero de argumentos pasados al programa ejecutado
- *
- *@argc: Recuento de argumentos
- *@argv: Vector de argumentos
- *
- *Return: numero de argumentos sin contar el el archivo ejecutado.
+ * main- program that prints its name, followed by a new line.
+ * @argc: count arguments to main
+ * @argv: vector to array arguments
+ * Return: always 0.
  */
-int main(int argc, char *argv[]__attribute__((unused)))
+
+int main(int argc, __attribute__((unused)) char *argv[])
 {
 	printf("%d\n", argc - 1);
 	return (0);

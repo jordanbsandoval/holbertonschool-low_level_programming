@@ -1,18 +1,15 @@
 #include <stdio.h>
 
 /**
- *main- imprimiendo los argumentos pasados incluyendo el archivo principal
- *
- *@argc: Recuento de argumentos
- *@argv: Vector de argumentos
- *
- *Return: imprime los argumentos pasados
+ * main- program that prints all arguments it receives.
+ * @argc: count arguments to main
+ * @argv: vector to array arguments
+ * Return: always 0.
  */
+
 int main(int argc, char *argv[])
 {
-	int i;
-
-	for (i = 0; i < argc; i++)
-		printf("%s\n", argv[i]);
+	while (argc--)
+		printf("%s\n", *argv++);
 	return (0);
 }
