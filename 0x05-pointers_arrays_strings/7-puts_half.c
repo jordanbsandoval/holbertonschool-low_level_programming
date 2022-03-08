@@ -1,40 +1,30 @@
 #include "main.h"
 
 /**
- *puts_half- imprime la segunda mitad de un array
- *
- *@str: puntero a un array
- *
- *Return: imprime la segunda mitad
+ * puts_half- function that prints half of a string, followed by a new line.
+ * @str: pointer to string
+ * Return: void
  */
 
 void puts_half(char *str)
 {
-	int maximo = _strlen(str);
-	int half = maximo / 2;
+	str += _strlen(str) / 2;
 
-	while (half < maximo)
-	{
-		_putchar(str[half]);
-		half++;
-	}
-	_putchar('\n');
+	for (; *str; str++)
+		_putchar(*str);
+	_putchar(10);
 }
-
 /**
- *_strlen- numero de elementos de un string
- *
- *@s: string a contar
- *
- *Return: numero de caracteres en el string
+ * _strlen- function that returns the length of a string.
+ * @s: pointer to string
+ * Return: length of the string
  */
 
 int _strlen(char *s)
 {
 	int i;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; *(s); s++, i++)
 		;
 	return (i);
 }
-

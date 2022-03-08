@@ -1,36 +1,31 @@
 #include "main.h"
 
 /**
- *print_rev- prints a string, in reverse, followed by a new line
- *
- *@s: puntero a char
- *
- *Return: string in reverse
+ * print_rev- function that prints a string, in reverse, followed by a new line
+ * @s: pointer to string
+ * Return: print to string in reverse to stdout
  */
 
 void print_rev(char *s)
 {
-	int ancho = _strlen(s);
+	s += _strlen(s) - 1;
 
-	for (; ancho >= 0; ancho--)
-		_putchar(s[ancho]);
-	_putchar('\n');
+	for (; *s; s--)
+		_putchar(*(s));
+	_putchar(10);
 }
 
 /**
- *_strlen- determina el ancho de un string
- *
- *@s: puntero a un string
- *
- *Return: numer de caracteres del string
+ * _strlen- function that returns the length of a string.
+ * @s: pointer to string
+ * Return: length of the string
  */
 
 int _strlen(char *s)
 {
 	int i;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; *(s); s++, i++)
 		;
-
 	return (i);
 }

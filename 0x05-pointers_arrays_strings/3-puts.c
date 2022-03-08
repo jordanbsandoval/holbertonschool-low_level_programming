@@ -1,16 +1,14 @@
 #include "main.h"
 
 /**
- *_puts- imprime lo que esta apuntando en el parametro pasado como argumento
- *
- *@str: parametro apuntado tipo char
- *
- *Return: imprime lo que apunta el parametro
+ * _puts- function that prints a string, followed by a new line, to stdout
+ * @str: pointer to string
+ * Return: print the string to stdout
  */
 
 void _puts(char *str)
 {
-	for (; *str; str++)
+	for (; *(str); str++)
 		_putchar(*str);
 	_putchar('\n');
 }

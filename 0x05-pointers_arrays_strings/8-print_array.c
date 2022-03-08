@@ -1,22 +1,18 @@
 #include "main.h"
 
 /**
- *print_array- imprime un numero de elementos especifico de un array
- *
- *@a: puntero a un array de enteros
- *@n: numero de elementos a imprimir
- *
- *Return: imprime un determinado numero de elementos
+ * print_array-
+ * @a: pointer to array integers
+ * @n: number of elements by print
+ * Return: void
  */
 
 void print_array(int *a, int n)
 {
-	int i;
-
-	for (i = 0; i < n; i++)
+	for (; n > 0; n--)
 	{
-		printf("%d", a[i]);
-		if (a[i] != a[n - 1])
+		printf("%d", *(a++));
+		if (n != 1)
 			printf(", ");
 	}
 	printf("\n");
