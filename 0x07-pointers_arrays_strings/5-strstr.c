@@ -2,23 +2,17 @@
 
 /**
  * _strstr- function that locates a substring.
- *
- * @haystack: pointer a char to evaluate
- * @needle: pointer a char from string
- * Description:	 function finds the first occurrence of the substring
- *	 needle in the string haystack
- *
- * Return: NULL if no search character
- *	   puntero a la cadena que contiene el conjunto de bytes
+ * @haystack: pointer to string to evaluate
+ * @needle: find the first ocurrence of the substring
+ * Return: pointer to string
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; *(needle + i) != '\0'; i++)
-		for (i = 0; *(haystack) != '\0'; haystack++)
-			if (*(needle + i) == *(haystack))
-				return (haystack);
+	for (i = 0; *(haystack + i) != '\0'; i++)
+		if (*(haystack + i) == *(needle))
+			return (haystack + i);
 	return (NULL);
 }

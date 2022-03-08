@@ -1,6 +1,7 @@
 #ifndef Holberton
 #define Holberton
 
+#include <stdlib.h>
 /*
  * Prototype functions or commonly called function declarations as well.
  */

@@ -1,28 +1,25 @@
 #include "main.h"
-#define SEPARADOR(x) (*s == ' ' || *s == '\t' || *s == ',' || *s == ';')
-#define SEPARADOR2(x) (*s == '!' || *s == '?' || *s == '"' || *s == '(')
-#define SEPARADOR3(x) (*s == ')' || *s == '{' || *s == '}')
+#define PATTERN(x)  (x == ' ' || x == '\t' || x == '\n' || x == ',' || x == ';' || x == '.' || x == '!' || x == '?' || x == '"' || x == '(' || x == ')' || x == '{' || x == '}')
+
 /**
- *cap_string- Funcion que pone en mayusculas todas las palabras de una cadena
- *
- *@s: puntero a una cadena, parametro.
- *
- *Return: palabras de una cadena empezando con mayuscula
+ * cap_string- function that capitalizes all words of a string.
+ * @s: pointer to string
+ * Return: pointer to string
  */
 
 char *cap_string(char *s)
 {
-	char *tmp_ind = s;
+	char *ptr_tmp = s;
 	char tmp;
-
-	while (*s != '\0')
+	while (*(s) != '\0')
 	{
-		if (SEPARADOR(*s) || SEPARADOR2(*s) || SEPARADOR3(*s))
-			*s = ' ';
-		if (tmp == ' ' && (*s >= 'a' && *s <= 'z'))
-			*s = *s - 32;
-		tmp = *s;
+		if (PATTERN(tmp) && *(s) >= 'a' && *(s) <= 'z')
+			*(s) = *(s) - 32;
+		if (*s == '\t')
+			*(s) = ' ';
+		tmp = *(s);
 		s++;
 	}
-	return (tmp_ind);
+
+	return (s = ptr_tmp);
 }

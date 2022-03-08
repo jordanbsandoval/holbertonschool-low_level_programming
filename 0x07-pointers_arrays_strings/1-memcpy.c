@@ -1,20 +1,16 @@
 #include "main.h"
 
 /**
- *_memcpy- copia determinados caracteres segun los bytes deseados a otro array
- *
- *@dest: puntero a string a copiar
- *@src: puntero al string donde vamos a copiar
- *@n: numero de bytes a copiar
- *
- *Return: puntero al string cambiado
+ * _memcpy- function copies n bytes from memory area src to memory area dest
+ * @dest: pointer to string of destiny
+ * @src: pointer from string to copy
+ * @n: number of bytes to copied
+ * Return: pointer to string
  */
+
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i;
-
-	for (i = 0; i < n && (*(dest + i) = *(src + i)) != '\0'; i++)
-		;
-	return (dest);
+	for (; n > 0; n--, dest++, src++)
+		*(dest) = *(src);
+	return (dest - n);
 }
-

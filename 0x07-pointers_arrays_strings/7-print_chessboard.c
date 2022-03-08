@@ -1,21 +1,21 @@
 #include "main.h"
 
 /**
- *print_chessboard- imprimiendo un tablero representando un array bidimensional
- *
- *@a: puntero a un array bidimensional
- *
- *Return: imprimo un tablero de ajedrez con los elementos del array bidimen...
+ * print_chessboard- function that prints the chessboard
+ * @a: pointer to an array bidimensioanl
+ * 
+ * Return: void
  */
 
 void print_chessboard(char (*a)[8])
 {
-	int i, j;
+	int i, p;
 
 	for (i = 0; i < 8; i++)
 	{
-		for (j = 0; j < 8; j++)
-			_putchar(a[i][j]);
-		_putchar('\n');
+		for (p = 0; p < 8; p++)
+			_putchar(a[i][p]);
+		_putchar(10);
 	}
+	printf("%s\n", *(a + 4));
 }

@@ -1,40 +1,34 @@
 #include "main.h"
 
 /**
- *_strncat- concatena 2 strings segun el numero de bytes que desee
- *
- *@dest: puntero a un array donde sera almacenado los bytes copiados
- *@src: puntero a un array de caracteres que sera copiado a otro array
- *@n: numero de bytes a copiar
- *
- *Return: puntero al array copiado
+ * _strncat-  function that copies a string.
+ * @dest: pointer to string destiny
+ * @src: pointer to string to copy
+ * @n: number of bytes to copy
+ * Return: pointer to string copied
  */
+
 char *_strncat(char *dest, char *src, int n)
 {
-	char *tmp = dest;
+	int i = _strlen(dest);
 
-	dest += _strlen(dest);
-	while (*(src) != '\0' && n > 0)
-	{
-		*dest++ = *src++;
-		n--;
-	}
-	return (tmp);
+	for (; n > 0 && *(src) != '\0'; i++, n--)
+		*(dest + i) = *(src)++;
+
+	return (dest);
 }
+
 /**
- *_strlen- determina el ancho de un string
- *
- *@s: puntero a un string
- *
- *Return: numer de caracteres del string
+ * _strlen- function that returns the length of a string.
+ * @s: pointer to string
+ * Return: length of the string
  */
 
 int _strlen(char *s)
 {
 	int i;
 
-	for (i = 0; s[i] != '\0'; ++i)
+	for (i = 0; *(s); s++, i++)
 		;
-
 	return (i);
 }

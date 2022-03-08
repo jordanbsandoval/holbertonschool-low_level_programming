@@ -1,26 +1,20 @@
 #include "main.h"
 
 /**
- *reverse_array- reversa los elementos de un array
- *
- *@a: puntero a un array de punteros
- *@n: numero de elementos en el array
- *
- *Return: imprime el array reversado
+ * reverse_array- function that reverse an string
+ * @a: pointer to array of numbers
+ * @n: number of length array
+ * Return: void
  */
 
 void reverse_array(int *a, int n)
 {
-	int tmp;
-	int i = 0;
-	int ult_pos = 0;
+	int tmp = 0, i, stop = n - 1;
 
-	while (n > i)
+	for (i = 0; i < stop; i++, stop--)
 	{
-		ult_pos = n - 1;
-		tmp = a[ult_pos];
-		a[ult_pos] = a[i];
-		a[i] = tmp;
-		n--, i++;
+		tmp = *(a + stop);
+		*(a + stop) = *(a + i);
+		*(a + i) = tmp;
 	}
 }
