@@ -1,42 +1,40 @@
 #include "main.h"
 
 /**
- *alloc_grid- create array 2D of integers
- *
- *@width: rows of array 2D
- *@height: colums of array 2D
- *
- *Return: create array 2D with pointer
+ *alloc_grid- function that returns a pointer to a dimensional array of integer
+ *@width: number of arrow for the array bidimenssionl
+ *@height: number of column for the array bidimenssionl
+ *Return: array bidimensional
  */
+
 int **alloc_grid(int width, int height)
 {
-	int **tmp;
+	int **array_bid = NULL;
 	int i, p;
 
-	/* allocate memory to create colums */
-	tmp = malloc(sizeof(int) * height);
-
-	/* condition to fail to allocate malloc*/
-	if (tmp == NULL)
+	if ((width && height) < 1)
 		return (NULL);
 
-	/* allocate memory to create row in each colum*/
+	array_bid = malloc(sizeof(int) * height);
+
+	if (array_bid == NULL)
+		return (NULL);
+	
 	for (i = 0; i < height; i++)
 	{
-		tmp[i] = malloc(sizeof(int) * width);
+		array_bid[i] = malloc(sizeof(int) * width);
 
-		/*check if allocated memory is done*/
-		if (tmp[i] == NULL)
+		if (array_bid[i] == NULL)
 		{
 			for (p = 0; p < i; p++)
-				free(tmp[p]);
-			free(tmp);
+				free(array_bid[p]);
+			free(array_bid);
 			return (NULL);
 		}
 
-		/* initialize with zero*/
 		for (p = 0; p < width; p++)
-			tmp[i][p] = 0;
+			array_bid[i][p] = 0;
 	}
-	return (tmp);
+
+	return (array_bid);
 }

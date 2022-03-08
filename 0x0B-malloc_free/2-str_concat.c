@@ -1,34 +1,31 @@
 #include "main.h"
 
 /**
- *str_concat- concatenates two strings
- *
- *@s1: pointer to string parameter one
- *@s2: pointer to string parameter two
- *
- *Return: string concatenated
+ * str_concat- function that concatenates two strings.
+ * @s1: pointer to string
+ * @s2: pointer to string
+ * Return: pointer to new string created
  */
 
 char *str_concat(char *s1, char *s2)
 {
-	char *tmp;
-	int ancho_s1, ancho_s2, max, i, p;
+	int len_str1 = _strlen(s1);
+	int len_str2 = _strlen(s2);
+	int i;
+	char *new_str = NULL;
 
-	ancho_s1 = _strlen(s1);
-	ancho_s2 = _strlen(s2);
-	max = (ancho_s1 + ancho_s2) + 1;
-	tmp = malloc(sizeof(char) * max);
+	new_str = malloc(sizeof(char) * ((len_str1 + len_str2) + 1));
 
-	if (tmp == NULL)
+	if (new_str == NULL)
 		return (NULL);
 
-	for (i = 0; i < ancho_s1 ; i++)
-		*(tmp + i) = *(s1 + i);
+	for (i = 0; i < len_str1; i++)
+		*(new_str + i) = *(s1 + i);
 
-	for (p = 0; i < max; i++, p++)
-		*(tmp + i) = *(s2 + p);
+	for (i = 0; i < len_str2; i++)
+		*(new_str + (len_str1 + i)) = *(s2 + i);
 
-	return (tmp + 0);
+	return (new_str);
 }
 
 /**
@@ -41,9 +38,9 @@ char *str_concat(char *s1, char *s2)
 
 int _strlen(char *s)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; *(s + i); i++)
-		;
+	while (*s++)
+		i++;
 	return (i);
 }
