@@ -1,25 +1,32 @@
-#ifndef HOLBERTON
-#define HOLBERTON
+#ifndef Structures
+#define Structures
+
+/*librarys*/
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * struct dog - It's a dog, what can I say
- * @name: dog's name
- * @age: dog's age
- * @owner: dog's owner name
+ * struct dog - estructura para perro
+ * @name: pointer to char
+ * @age: number
+ * @owner: pointer to char
  *
- * Description: It's a dog, what can I say
+ * Description: Objeto para crear un nuevo perro
  */
+
 typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-} dog_t;
+}
+dog_t;
 
-int _putchar(char c);
+/*prototypes*/
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 dog_t *new_dog(char *name, float age, char *owner);
 void free_dog(dog_t *d);
+
 
 #endif
