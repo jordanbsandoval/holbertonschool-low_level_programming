@@ -1,107 +1,86 @@
 #include "variadic_functions.h"
 
 /**
- * Counter_Ocurrence - Counts the occurrences of the format.
- * @format: pointer a la varialbe format
- * Return: Number of ocurrence.
+ * print_c- print argument type char
+ * @list: argument to print
+ *
+ * Return: print to screen argument
+ */
+void print_c(va_list list)
+{
+	printf("%c", va_arg(list, int));
+}
+
+/**
+ * print_e- print argument type int
+ * @list: argument to print
+ *
+ * Return: print to screen argument
+ */
+void print_e(va_list list)
+{
+	printf("%d", va_arg(list, int));
+}
+/**
+ * print_f- print argument type float
+ * @list: argument to print
+ *
+ * Return: print to screen argument
+ */
+void print_f(va_list list)
+{
+	printf("%f", va_arg(list, double));
+}
+/**
+ * print_s- print argument type string
+ * @list: argument to print
+ *
+ * Return: print to screen argument
  */
 
-short int Counter_Ocurrence(const char * const format)
+void print_s(va_list list)
 {
-	short int Counter = 0;
-	unsigned short int index = 0;
-
-	while (format && format[index])
+	char *ptr = va_arg(list, char *);
+	if (ptr == NULL)
 	{
-		if (format[index] == 'c' || format[index] == 'i'
-			|| format[index] == 's' || format[index] == 'f')
-			Counter++;
-		index++;
+		printf("(nil)");
+		return;
 	}
-	return (Counter);
+	printf("%s", ptr);
 }
-
-/**
- * Print_Character - Function that prints a character
- * @lista: Contains the arguments that were passed to the function.
- * @Separador: Funciona como un contador para imprimir espacio entre
- *             el contenido de los argumentos.
- */
-
-void Print_Character(va_list lista, short int Separador, short int Limit)
-{
-	printf((Separador < Limit - 1) ? "%c " : "%c\n", va_arg(lista, int));
-}
-
-/**
- * Print_Integer - Function that prints a number integer
- * @lista: Contains the arguments that were passed to the function.
- * @Separador: Funciona como un contador para imprimir espacio entre
- *             el contenido de los argumentos.
- */
-
-void Print_Integer(va_list lista, short int Separador, short int Limit)
-{
-	printf((Separador < Limit - 1) ? "%d " : "%d\n", va_arg(lista, int));
-}
-
-/**
- * Print_Float - Function that prints a number point-flot
- * @lista: Contains the arguments that were passed to the function.
- * @Separador: Funciona como un contador para imprimir espacio entre
- *             el contenido de los argumentos.
- */
-
-void Print_Float(va_list lista, short int Separador, short int Limit)
-{
-	printf((Separador < Limit - 1) ? "%f " : "%f\n", va_arg(lista, double));
-}
-
-/**
- * Print_String - Function that prints a character string
- * @lista: Contains the arguments that were passed to the function.
- * @Separador: Funciona como un contador para imprimir espacio entre
- *             el contenido de los argumentos.
- */
-
-void Print_String(va_list lista, short int Separador, short int Limit)
-{
-	printf((Separador < Limit - 1) ? "%s" : "%s\n", va_arg(lista, char *));
-}
-
-/**
- * print_all - function that prints anything.
- * @format: Pointer that Contains the arguments that were passed to the funct.
- */
 
 void print_all(const char * const format, ...)
 {
-	format_ formato[] = {
-		{0, 0, "c", Print_Character},
-		{0, 0, "i", Print_Integer},
-		{0, 0, "f", Print_Float},
-		{0, 0, "s", Print_String}
+	va_list list;
+	
+	formato formato[] = {
+		{"c", print_c},
+		{"i", print_e},
+		{"f", print_f},
+		{"s", print_s},
+		{NULL, NULL}
 	};
-	unsigned short int index = 0;
-	unsigned short int index_Formato = 0;
-	char State = 0;
+	int i = 0, j;
+	char *separate = "";
 
-	va_list Lista_Argument;
+	va_start(list, format);
 
-	ini_struc(formato, format, index)
-
-	index = 0;
-	va_start(Lista_Argument, format);
-	while (format && format[index])
+	while (format && *(format + i))
 	{
-		if (*(formato[index_Formato].formato) == format[index])
+		j = 0;
+		while (formato[j].op != NULL)
 		{
-			formato[index_Formato].Pointer_Funcion(Lista_Argument, (formato[1].Separador)++, formato[2].Limit);
-			State = 1;
+			if (*(formato[j].op) == *(format + i))
+			{
+				printf("%s", separate);
+				formato[j].f(list);
+				separate = ", ";
+				break;
+			}
+			j++;
 		}
-		index_Formato++;
-		if (State || index_Formato == 4)
-			index_Formato = 0, State = 0, index++;
+		i++;
 	}
-	va_end(Lista_Argument);
+	printf("\n");
+	va_end(list);
 }

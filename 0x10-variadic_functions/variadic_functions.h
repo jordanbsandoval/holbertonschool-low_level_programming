@@ -1,29 +1,24 @@
-#ifndef FuncionPrototype
-#define FuncionPrototype
-
-#include <stdarg.h>
-#include <stdlib.h>
+#ifndef VAR_FUNCTION
+#define VAR_FUNCTION
+/*librarys*/
 #include <stdio.h>
+#include <stdarg.h>
 
-#define ini_struc(formato,format, Counter)  while(Counter < 4)(formato[Counter++].Limit) = Counter_Ocurrence(format);
+/*structure*/
+typedef struct formato{
+	char *op;
+	void ((*f)(va_list));
+}formato;
 
-/**
- * struct op - Struct op
- *
- * @Character: The Calificador
- * @Pointer_Function: The function associated
- */
-
-typedef struct formato_
-{
-	short int Separador;
-	short int Limit;
-        char *formato;
-        void (*Pointer_Funcion)(va_list list, short int Separador, short int limit);
-}format_;
-
+/*prototipos*/
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
+
+void print_c(va_list);
+void print_i(va_list);
+void print_f(va_list);
+void print_s(va_list);
+
 #endif
