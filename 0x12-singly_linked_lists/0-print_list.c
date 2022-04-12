@@ -1,23 +1,20 @@
 #include "lists.h"
 
-/**
- * print_list - Function that prints all the elements of a list_t list.
- * @Pointer_Running_Lista: Pointer running through the list
- * Return: Returns the number of items in the list.
- */
-
-size_t print_list(const list_t *Pointer_Running_Lista)
+size_t print_list(const list_t *h)
 {
-	size_t Number_Of_Struct = 0;
+	size_t count = 0, ancho;
 
-	while (Pointer_Running_Lista)
+	while (h)
 	{
-		if (Pointer_Running_Lista->str)
-			printf("[%d] %s\n", Pointer_Running_Lista->len, Pointer_Running_Lista->str);
+		if (h->str == NULL)
+			printf("[0] (nil)\n");
 		else
-			write(1, "[0] (nil)\n", 10);
-		Pointer_Running_Lista = Pointer_Running_Lista->next;
-		Number_Of_Struct++;
+		{
+			ancho = _strlen(h->str);
+			printf("[%ld] %s\n", ancho, h->str);
+		}
+		count++;
+		h = h->next;
 	}
-	return (Number_Of_Struct);
+	return (count);
 }
