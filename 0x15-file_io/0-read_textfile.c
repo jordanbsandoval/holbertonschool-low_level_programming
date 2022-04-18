@@ -1,38 +1,40 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * read_textfile - Read a text
- * @filename: name of the file
- * @letters: is the number of letters it should read and print
- * Return: the actual number of letters it could read and print
+ * read_textfile- function that reads a text file and prints it to the stout.
+ * @filename: pointer to name of the file
+ * @letters: number of bytes to saved
+ * Return: number of bytes print
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, rd, wr;
-	char *c = malloc(letters);
+	ssize_t count = 0;
+	char *buff = malloc(letters);
+	int fd = open(filename, O_RDONLY);
 
-	if (!c || !*filename)
+	if (buff == NULL)
 		return (0);
-	fd = open(filename, O_RDWR);
-	if (fd == -1)
+
+	if (fd == -1 || filename == NULL)
 	{
-		free(c);
+		free(buff);
 		return (0);
 	}
-	rd = read(fd, c, letters);
-	if (rd == -1)
+	count = read(fd, buff, letters);
+
+	if (count == -1)
 	{
-		free(c);
+		free(buff);
 		return (0);
 	}
-	wr = write(STDOUT_FILENO, c, rd);
-	if (wr == -1)
+	buff[count] = '\0';
+
+	if ((write(STDIN_FILENO, buff, count)) < 0)
 	{
-		free(c);
+		free(buff);
 		return (0);
 	}
-	free(c);
 	close(fd);
-	return (wr);
+	return (count);
 }

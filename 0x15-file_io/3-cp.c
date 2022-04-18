@@ -1,51 +1,48 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
- *main - entry point.
- *@argc: number of argument
- *@argv: character value an array of pointers to the strings.
- *
- *Return: 0 if success.
+ * main - check the code
+ * @ac: number of parameters
+ * @av: array of pointer to char
+ * Return: Always 0.
  */
-
-int main(int argc, char **argv)
+int main(int ac, char **av)
 {
-	char buffer[1024];
-	int rd, file_from, file_to;
+	int fd1, fd2, rd, wr, cl1, cl2;
+	const char *from = NULL, *to = NULL;
+	char buff[MAXSIZE];
 
-	if (argc != 3)
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
-	file_from = open(argv[1], O_RDONLY);
-
-	if (file_from == -1)
+	if (ac != 3)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(98);
 	}
+	rd = wr = cl1 = cl2 = 0;
 
-	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (file_to == -1)
+	from = av[1];
+	to = av[2];
+
+	fd1 = open(from, O_RDONLY);
+	rd = read(fd1, buff, MAXSIZE);
+	if (fd1 == -1 || rd == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
-	rd = read(file_from, buffer, 1024);
-	while (rd > 0)
-	{
-		if (write(file_to, buffer, rd) != rd)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(99);
-		}
-		rd = read(file_from, buffer, 1024);
-	}
-	if (rd == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", from);
 		exit(98);
 	}
-	if (close(file_to))
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to), exit(100);
-	if (close(file_from))
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from), exit(100);
+	buff[MAXSIZE] = '\0';
+	fd2 = open(to, O_TRUNC | O_WRONLY | O_CREAT, 0664);
+	wr = write(fd2, buff, rd);
+	if (fd2 == -1 || wr == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
+		exit(98);
+	}
+	cl1 = close(fd1);
+	cl2 = close(fd2);
+	if (cl1 == -1 || cl2 == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
+		exit(100);
+	}
 	return (0);
 }
