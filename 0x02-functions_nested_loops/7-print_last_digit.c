@@ -1,23 +1,21 @@
 #include "main.h"
 
 /**
- *print_last_digit- imprime el ultimo digito de un numero pasado por parametro
- *
- *@n: parameter to evaluate
- *
- *Return: the value of the last digit
- */
+* print_last_digit- Funcion que imprime el ultimo digito de un numero
+*
+* Return: Retorna el valor del ultimo digito
+*/
+
+int _abs(int c)
+{
+  return (((c < 0) ? c * (-1) : c));
+}
 
 int print_last_digit(int n)
 {
-	int last = n % 10;
+  int tmp;
+  tmp = (_abs(n) % 10);
 
-	if (last < 0)
-	{
-		last *= -1;
-		_putchar(last + '0');
-	}
-	else
-		_putchar(last + '0');
-	return (last);
+  _putchar(tmp + '0');
+  return (tmp);
 }
