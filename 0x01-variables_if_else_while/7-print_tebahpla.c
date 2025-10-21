@@ -32,10 +32,8 @@ void print_str(char s[])
 	i--;
 
 	while (s[i] != '\0')
-	{
-		putchar(s[i]);
-		i--;
-	}
+		putchar(s[i]), i--;
+
 }
 /**
  *main- programa que imprime el abecedario en minuscula empezando por la z-a

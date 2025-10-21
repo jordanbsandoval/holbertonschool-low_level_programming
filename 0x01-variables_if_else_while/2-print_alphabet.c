@@ -1,18 +1,19 @@
 #include <stdio.h>
 
 /**
- *main- programa que imprime el abecedario con la funcion putchar
- *
- *Return: always 0.
- */
+* main- Write a program that prints the alphabet in lowercase, followed by \n.
+*
+* Return: Always 0.
+*/
 
-int main(void)
+int main (void)
 {
-	int i = 0;
-	char alp[] = "abcdefghijklmnopqrstuvwxyz";
+  char alp_ini = 'a';
+  char alp_fin = 'z';
 
-	while (alp[i] != '\0')
-		putchar(alp[i]), i++;
-	putchar('\n');
-	return (0);
+  while (alp_ini <= alp_fin)
+    putchar(alp_ini), alp_ini++;
+  putchar(10);
+
+  return (0);
 }
