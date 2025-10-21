@@ -1,21 +1,19 @@
-#include "main.h"
+#include "myheaders.h"
 
 /**
- *main- print word putchar
- *
- *Return: always 0.
- */
+*main- programa que imprime un string con la funcion _putchar
+*
+*Return: Always 0.
+*/
 
 int main(void)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar('\n');
-	return (0);
+  char s[]="_putchar";
+  char *pointer = s;
+
+  while (*pointer)
+    _putchar(*pointer++);
+
+  _putchar(10);
+  return (0);
 }
