@@ -15,12 +15,10 @@ void num_nat_mult(int a, int b, int stop)
 {
   int sum = 0, i;
 
-  for (i = 0; i < 500; i++)
+  for (i = 0; i < stop; i++)
   {
-    if (stop < (i * a) || stop < (i * b))
-      break;
-    sum += (i * a) + (i * b);
-    (sum != 0) ? printf(", %d", sum) : printf("0");
+    if ((i % a) == 0 || (i % b) == 0)
+      sum += i;
   }
-  printf("\n");
+  printf("%d\n", sum);
 }
