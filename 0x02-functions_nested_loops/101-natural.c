@@ -20,6 +20,7 @@ void num_nat_mult(int a, int b, int stop)
     if (stop < (i * a) || stop < (i * b))
       break;
     sum += (i * a) + (i * b);
-    printf("a = %d, b = %d, i = %d\nLa suma de los multiplos de %d + %d = %d\n", a, b, i, a * i, b * i, sum);
+    (sum != 0) ? printf(", %d", sum) : printf("0");
   }
+  printf("\n");
 }
